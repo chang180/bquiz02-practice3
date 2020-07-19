@@ -8,8 +8,10 @@
 
 	<title>健康促進網</title>
 	<link href="./css.css" rel="stylesheet" type="text/css">
+	<link href="SpryAssets/SpryTabbedPanels.css" rel="stylesheet" type="text/css" />
 	<script src="./jquery-1.9.1.min.js"></script>
 	<script src="./js.js"></script>
+<script src="SpryAssets/SpryTabbedPanels.js" type="text/javascript"></script>
 </head>
 
 <body>
@@ -31,6 +33,8 @@
 				<a class="blo" href="?do=know">講座訊息</a>
 				<a class="blo" href="?do=que">問卷調查</a>
 			</div>
+		
+		  
 			<div class="hal" id="main">
 				<div>
 					<marquee style="width:78%; display:inline-block;">請民眾踴躍投稿電子報，讓電子報成為大家相互交流、分享的園地</marquee>
