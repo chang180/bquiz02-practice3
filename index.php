@@ -11,13 +11,10 @@
 	<link href="SpryAssets/SpryTabbedPanels.css" rel="stylesheet" type="text/css" />
 	<script src="./jquery-1.9.1.min.js"></script>
 	<script src="./js.js"></script>
-<script src="SpryAssets/SpryTabbedPanels.js" type="text/javascript"></script>
+	<script src="SpryAssets/SpryTabbedPanels.js" type="text/javascript"></script>
 </head>
 
 <body>
-	<div id="alerr" style="background:rgba(51,51,51,0.8); color:#FFF; min-height:100px; width:300px; position:fixed; display:none; z-index:9999; overflow:auto;">
-		<pre id="ssaa"></pre>
-	</div>
 	<div id="all">
 		<div id="title">
 			<?= date("m 月 d 日 l"); ?> | 今日瀏覽: <?= $_SESSION['total']; ?> | 累積瀏覽: <?= $Total->q("SELECT SUM(`total`) from total")[0][0]; ?>
@@ -33,8 +30,8 @@
 				<a class="blo" href="?do=know">講座訊息</a>
 				<a class="blo" href="?do=que">問卷調查</a>
 			</div>
-		
-		  
+
+
 			<div class="hal" id="main">
 				<div>
 					<marquee style="width:78%; display:inline-block;">請民眾踴躍投稿電子報，讓電子報成為大家相互交流、分享的園地</marquee>
@@ -44,7 +41,8 @@
 						?>
 
 							<a href="?do=login">會員登入</a>
-						<?php }else{ if ($_SESSION['login'] == 'admin') {
+							<?php } else {
+							if ($_SESSION['login'] == 'admin') {
 							?>
 								歡迎，<?= $_SESSION['login']; ?><br>
 								<button onclick="location.href='admin.php'">管理</button><button onclick="location.href='api/logout.php'">登出</button>
@@ -53,8 +51,9 @@
 							?>
 								歡迎，<?= $_SESSION['login']; ?><br>
 								<button onclick="location.href='api/logout.php'">登出</button>
-						<?php 
-						} }
+						<?php
+							}
+						}
 						?>
 					</span>
 					<div class="">
