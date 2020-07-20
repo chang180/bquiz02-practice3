@@ -93,5 +93,6 @@ if (empty($_SESSION['total'])) {
         $Total->save($tt);
     } else {
         $Total->save(['date' => $today, 'total' => 1]);
+        $_SESSION['total']="1";
     }
 }

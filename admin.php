@@ -18,7 +18,7 @@
 	</div>
 	<div id="all">
 		<div id="title">
-			<?= date("m 月 d 日 l"); ?> | 今日瀏覽: <?= $_SESSION['total']; ?> | 累積瀏覽: <?= $Total->q("SELECT SUM(`total`) from total")[0][0]; ?>
+			<?= date("m 月 d 日 l"); ?> | 今日瀏覽: <?= $_SESSION['total']??"1"; ?> | 累積瀏覽: <?= $Total->q("SELECT SUM(`total`) from total")[0][0]; ?>
 			<a href="index.php" style="float:right">回首頁</a></div>
 		<div id="title2">
 			<img src="./img/02B01.jpg" title="健康促進網 - 回首頁" onclick="location.href='index.php'">
